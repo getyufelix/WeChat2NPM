@@ -76,7 +76,7 @@ docker-compose up -d
 
 ### 2. 配置回调 URL
 
-在企业微信应用设置中，配置回调 URL 为 `http://<你的服务器地址>/wechat/callback`。
+在企业微信应用设置中，配置回调 URL 为 `https://<你的服务器地址>/api/v1/message/?token=<WECHAT_TOKEN>`。
 
 ### 3. 创建自定义菜单
 
