@@ -5,7 +5,10 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # 复制当前目录内容到容器的/app目录
-COPY . /app
+COPY requirements.txt /app/
+COPY app.py /app/
+COPY WXBizMsgCrypt3.py /app/
+COPY ierror.py /app/
 
 # 安装依赖
 RUN pip install --no-cache-dir -r requirements.txt  
