@@ -82,48 +82,7 @@ docker-compose up -d
 
 在企业微信中创建自定义菜单，允许用户通过菜单项开启或关闭 NPM 代理。你可以使用以下 Python 脚本创建菜单：
 
-```python
-import requests
-import json
-
-# 企业微信的 access_token 和 agentid
-access_token = "你的 Access Token"
-agent_id = "你的应用 Agent ID"
-
-# 构造自定义菜单的 JSON 数据
-menu_data = {
-    "button": [
-        {
-            "name": "FRP",
-            "sub_button": [
-                {
-                    "type": "click",
-                    "name": "Enable",
-                    "key": "frp.enable"
-                },
-                {
-                    "type": "click",
-                    "name": "Disable",
-                    "key": "frp.disable"
-                }
-            ]
-        }
-    ]
-}
-
-# 将 JSON 数据转换为字符串
-menu_data_str = json.dumps(menu_data, ensure_ascii=False).encode('utf-8')
-
-# 构造请求 URL
-url = f"https://qyapi.weixin.qq.com/cgi-bin/menu/create?access_token={access_token}&agentid={agent_id}"
-
-# 发送 POST 请求
-response = requests.post(url, data=menu_data_str)
-
-# 打印响应内容
-print("Response Status Code:", response.status_code)
-print("Response Content:", response.json())
-```
+[create\_menu.py](https://raw.githubusercontent.com/getyufelix/wechat2npm/refs/heads/main/create_menu.py)
 
 ---
 
