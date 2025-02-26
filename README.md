@@ -2,8 +2,6 @@
 
 WeChat2NPM 是一个用于将 **企业微信** 和 **Telegram** 与 Nginx Proxy Manager (NPM) 集成的工具，允许用户通过企业微信应用或 Telegram Bot 远程控制 NPM 的流状态（开启或关闭代理）。通过简单的配置，用户可以在企业微信或 Telegram 中一键开启或关闭 NPM 的代理服务，方便管理内网穿透。
 
----
-
 ## 功能特性
 
 - **企业微信集成**：通过企业微信应用实现远程控制 NPM 的流状态。
@@ -12,8 +10,6 @@ WeChat2NPM 是一个用于将 **企业微信** 和 **Telegram** 与 Nginx Proxy 
 - **Docker 支持**：通过 Docker 容器化部署，简化安装和配置过程。
 - **自定义菜单**：支持在企业微信中创建自定义菜单，方便用户操作。
 - **日志记录**：支持不同级别的日志记录，便于调试和监控。
-
----
 
 ## 快速开始
 
@@ -65,8 +61,6 @@ vi docker-compose.yaml # 【可选】
 docker compose up -d
 ```
 
----
-
 ## 企业微信配置
 
 ### 1. 创建企业微信应用
@@ -88,8 +82,6 @@ docker compose up -d
 
 [create\_menu.py](https://raw.githubusercontent.com/getyufelix/wechat2npm/refs/heads/main/create_menu.py)
 
----
-
 ## Telegram 配置
 
 ### 1. 创建 Telegram Bot
@@ -110,8 +102,6 @@ docker compose up -d
    disable - 关闭NPM代理
    ```
 
----
-
 ## 使用方法
 
 ### 通过企业微信控制 NPM
@@ -125,26 +115,18 @@ docker compose up -d
 2. 发送 `/enable` 开启 NPM 代理。
 3. 发送 `/disable` 关闭 NPM 代理。
 
----
-
 ## 注意事项
 
 - **安全性**：确保你的 NPM 管理界面和 API 接口受到保护，避免未经授权的访问。
 - **资源管理**：在不使用 NPM 代理时，请务必关闭代理服务，以避免不必要的资源消耗。
 - **日志监控**：定期检查日志文件，确保系统运行正常。
 
----
-
 ## 贡献
 
 欢迎提交 Issue 和 Pull Request，帮助我们改进 WeChat2NPM。
 
----
-
 ## 许可证
 
 本项目采用 MIT 许可证。详情请参阅 [LICENSE](LICENSE) 文件。
-
----
 
 感谢使用 WeChat2NPM！
