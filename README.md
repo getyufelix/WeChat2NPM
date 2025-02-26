@@ -58,7 +58,11 @@ NPM_SECRET=                 # NPM 密码
 使用以下命令启动服务：
 
 ```bash
-docker-compose up -d
+wget https://raw.githubusercontent.com/getyufelix/wechat2npm/refs/heads/main/docker-compose.yml
+
+vi docker-compose.yaml # 【可选】
+
+docker compose up -d
 ```
 
 ---
