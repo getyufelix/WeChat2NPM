@@ -1,0 +1,9 @@
+version: '3'
+services:
+    wechat2npm:
+        container_name: wechat2npm
+        restart: always
+        ports:
+            - '181:8080'
+        image: 'getyufelix/wechat2npm:latest'
+        env_file: ./.env
