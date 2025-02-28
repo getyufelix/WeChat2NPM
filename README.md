@@ -24,7 +24,7 @@ WeChat2NPM 是一个用于将 **企业微信** 和 **Telegram** 与 Nginx Proxy 
 
 配置 `app.env` 环境变量：
 
-```yaml
+```bash
 wget https://raw.githubusercontent.com/getyufelix/wechat2npm/refs/heads/main/app.env
 
 vi app.env
