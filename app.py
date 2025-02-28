@@ -71,7 +71,7 @@ if token and encoding_aes_key and corp_id:
     qy_api = WXBizMsgCrypt(token, encoding_aes_key, corp_id)
     logger.info("WeChat initialized successfully")
 else:
-    logger.error("WeChat initialization failed: Missing required environment variables")
+    logger.warning("WeChat initialization failed: Missing required environment variables")
 
 # 全局变量来存储当前的线程和事件
 current_timer = None
