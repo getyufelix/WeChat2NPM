@@ -22,12 +22,12 @@ WeChat2NPM 是一个用于将 **企业微信** 和 **Telegram** 与 Nginx Proxy 
 
 ### 2. 配置环境变量
 
-在项目根目录下配置环境变量：
+在项目根目录下配置 `app.env` 环境变量：
 
 ```yaml
-wget https://raw.githubusercontent.com/getyufelix/wechat2npm/refs/heads/main/.env
+wget https://raw.githubusercontent.com/getyufelix/wechat2npm/refs/heads/main/app.env
 
-vi .env
+vi app.env
 ```
 
 ### 3. 启动服务
@@ -47,7 +47,7 @@ docker compose up -d
 ### 1. 创建企业微信应用
 
 1. 登录企业微信管理后台，创建一个新的应用。
-2. 获取以下信息并填写到 `.env` 文件中：
+2. 获取以下信息并填写到 `app.env` 文件中：
    - **企业 ID** (`WECHAT_CORP_ID`)
    - **应用 Secret** (`WECHAT_CORP_SECRET`)
    - **回调 Token** (`WECHAT_TOKEN`)
@@ -69,7 +69,7 @@ docker compose up -d
 
 1. 打开 Telegram，搜索 `@BotFather`。
 2. 发送 `/newbot`，按照提示创建你的 Bot。
-3. 创建完成后，`BotFather` 会提供一个 Token，将其保存到 `.env` 文件中，作为 `TELEGRAM_TOKEN` 的值。
+3. 创建完成后，`BotFather` 会提供一个 Token，将其保存到 `app.env` 文件中，作为 `TELEGRAM_TOKEN` 的值。
 
 ### 2. 设置 Bot 命令
 
